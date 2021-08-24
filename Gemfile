@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
-
-
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1' # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'pg', '~> 1.1'  # Use postgresql as the database for Active Record
 gem 'puma', '~> 5.0'  # Use Puma as the app server
@@ -24,6 +22,7 @@ end
 group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
