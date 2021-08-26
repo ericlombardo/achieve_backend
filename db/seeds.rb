@@ -160,6 +160,7 @@
 # end
 
 # get all quotes from the api
+# Inspirational quotes provided by <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a>
 quotes = JSON.parse(HTTParty.get('https://zenquotes.io/api/quotes'))
 # loop through quotes and create new quote instances for each
 quotes.each do |quote|
