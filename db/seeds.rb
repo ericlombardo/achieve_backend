@@ -159,4 +159,9 @@
 #   end
 # end
 
-
+# get all quotes from the api
+quotes = JSON.parse(HTTParty.get('https://zenquotes.io/api/quotes'))
+# loop through quotes and create new quote instances for each
+quotes.each do |quote|
+  Quote.create(quote: quote['q'], author: quote['a'])
+end

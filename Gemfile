@@ -18,6 +18,8 @@ gem 'rack-cors' # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'httparty' # gem to allow API calls
+  gem 'pry'
 end
 
 group :development do
