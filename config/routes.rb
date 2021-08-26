@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :quotes
   resources :milestones
   resources :activities
   resources :goals

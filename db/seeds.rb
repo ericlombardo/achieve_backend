@@ -149,12 +149,13 @@
 # ])
 
 # Goal.all.each do | goal |
-#   13.times do 
+#   5.times do 
 #     goal.activities.create(
 #       title: Faker::Hobby.activity,
 #       duration: Faker::Number.between(from: 1, to: 5000 ),
-#       date: Faker::Date.forward(days: 1),
+#       date: Faker::Date.forward(days: 2),
 #       notes: Faker::Hacker.say_something_smart
 #     )
 #   end
 # end
+
