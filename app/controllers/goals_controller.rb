@@ -10,15 +10,17 @@ class GoalsController < ApplicationController
 
   # GET /goals/1
   def show
-    render json: @goal
+    render json: @goal, include: [:milestones, :activities]
   end
 
   # POST /goals
-  def create
+  # create a class method that formats the params and then creates a new instance from that data?
+  # pluralize method may go here as well?? 
+  def create  
     @goal = Goal.new(goal_params)
 
     if @goal.save
-      render json: @goal, status: :created, location: @goal
+      render json: @goal, include: [:milestones, :activities], status: :created, location: @goal
     else
       render json: @goal.errors, status: :unprocessable_entity
     end
@@ -27,7 +29,7 @@ class GoalsController < ApplicationController
   # PATCH/PUT /goals/1
   def update
     if @goal.update(goal_params)
-      render json: @goal
+      render json: @goal, include: [:milestones]
     else
       render json: @goal.errors, status: :unprocessable_entity
     end
@@ -46,6 +48,6 @@ class GoalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def goal_params
-      params.require(:goal).permit(:title, :durationNumber, :durationUnit, :durationEnd, :goalVerb, :goalNumber, :goalUnit, :timeSpent)
+      params.require(:goal).permit(:title, :durationNumber, :durationUnit, :durationEnd, :goalVerb, :goalNumber, :goalUnit, :timeSpent, :id, :created_at, :updated_at, :why, milestones: [:content, :complete, :id, :goal_id, :created_at, :updated_at])
     end
 end

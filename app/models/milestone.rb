@@ -1,3 +1,3 @@
 class Milestone < ApplicationRecord
-  belongs_to :goal, optional: true
+  belongs_to :goal
 end
