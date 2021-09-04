@@ -27,16 +27,14 @@ ActiveRecord::Schema.define(version: 2021_08_26_215335) do
 
   create_table "goals", force: :cascade do |t|
     t.string "title"
-    t.integer "durationNumber"
-    t.string "durationUnit"
     t.date "durationEnd"
+    t.integer "dayCount"
     t.string "goalVerb"
     t.integer "goalNumber"
     t.string "goalUnit"
-    t.integer "timeSpent"
+    t.text "why"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.text "why"
   end
 
   create_table "milestones", force: :cascade do |t|
