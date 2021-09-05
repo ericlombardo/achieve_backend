@@ -5,22 +5,24 @@ class GoalsController < ApplicationController
   def index
     @goals = Goal.all
 
-    render json: @goals, include: [:milestones, :activities]
+    render json: @goals, include: [:milestones]
   end
 
   # GET /goals/1
   def show
-    render json: @goal, include: [:milestones, :activities]
+    render json: @goal, include: [:milestones]
   end
 
   # POST /goals
-  # create a class method that formats the params and then creates a new instance from that data?
-  # pluralize method may go here as well?? 
+
   def create  
     @goal = Goal.new(goal_params)
-
+    
     if @goal.save
-      render json: @goal, include: [:milestones, :activities], status: :created, location: @goal
+      
+      build_milestones(goal_params[:milestones]) # AC => itererates through each milestone to create and link to goal
+
+      render json: @goal, include: [:milestones], status: :created, location: @goal
     else
       render json: @goal.errors, status: :unprocessable_entity
     end
@@ -48,6 +50,7 @@ class GoalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def goal_params
-      params.require(:goal).permit(:title, :durationNumber, :durationUnit, :durationEnd, :goalVerb, :goalNumber, :goalUnit, :timeSpent, :id, :created_at, :updated_at, :why, milestones: [:content, :complete, :id, :goal_id, :created_at, :updated_at])
+      params.require(:goal).permit(:title, :dayCount, :durationEnd, :goalVerb, :goalNumber, :goalUnit, :id, :created_at, :updated_at, :why, milestones: [])
+      # milestones: [:content, :complete, :id, :goal_id, :created_at, :updated_at]
     end
 end

@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_08_26_215335) do
 
   create_table "milestones", force: :cascade do |t|
     t.string "content"
-    t.boolean "complete"
+    t.boolean "complete", default: false
     t.integer "goal_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
