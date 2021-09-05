@@ -20,8 +20,6 @@ class GoalsController < ApplicationController
     
     if @goal.save
       
-      build_milestones(goal_params[:milestones]) # AC => itererates through each milestone to create and link to goal
-
       render json: @goal, include: [:milestones], status: :created, location: @goal
     else
       render json: @goal.errors, status: :unprocessable_entity
@@ -50,7 +48,7 @@ class GoalsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def goal_params
-      params.require(:goal).permit(:title, :dayCount, :durationEnd, :goalVerb, :goalNumber, :goalUnit, :id, :created_at, :updated_at, :why, milestones: [])
+      params.require(:goal).permit(:title, :dayCount, :durationEnd, :goalVerb, :goalNumber, :goalUnit, :id, :created_at, :updated_at, :why, newMilestones: [], milestones: [:content, :complete, :id, :goal_id, :created_at, :updated_at])
       # milestones: [:content, :complete, :id, :goal_id, :created_at, :updated_at]
     end
 end
