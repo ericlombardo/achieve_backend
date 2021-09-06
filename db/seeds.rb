@@ -1,6 +1,6 @@
 
 goal_1 = Goal.create( 
-  title: 'In 80 days i will have lost 20 lbs in order to be healthier and have more energy',
+  title: 'I will have lost 20 lbs in order to be healthier and have more energy',
   why: 'to be healthier and have more energy',
   dayCount: 5,
   durationEnd: Time.now + (86400 * 365),
@@ -30,7 +30,7 @@ goal_1.milestones.create([
 
 
 goal_2 = Goal.create( 
-  title: 'In 8 days I will have quite smoking in order to be around longer for my family and friends',
+  title: 'I will have quite smoking in order to be around longer for my family and friends',
   why: 'to be around longer for my family and friends',
   dayCount: 8,
   durationEnd: Time.now + (86400 * 182),
@@ -59,7 +59,7 @@ goal_2.milestones.create([
 ])
 
 goal_3 = Goal.create( 
-  title: 'In 80 days I will have Read 3 books in order to help me grow in my personal and professional life',
+  title: 'I will have Read 3 books in order to help me grow in my personal and professional life',
   why: 'to help me grown in my personal and professional life',
   dayCount: 80,
   durationEnd: Time.now + (86400 * 56),
@@ -88,7 +88,7 @@ goal_3.milestones.create([
 ])
 
 goal_4 = Goal.create( 
-  title: 'In 720 days I will have Created 10 photos in order to express my creativity through photography',
+  title: 'I will have Created 10 photos in order to express my creativity through photography',
   why: 'to express my creativity through photography',
   dayCount: 3000,
   durationEnd: Time.now + (86400 * 730),
