@@ -1,6 +1,7 @@
-# Achieve Application
+# Achieve
 
-This application was built to help people who want to achieve a goal. It will walk them through each step of creating a S.M.A.R.T goal and allow them to track their progress along the way. 
+![Alt text](public/images/Screen Shot 2021-09-23 at 1.00.25 PM.png?raw=true "Title")
+This application was built for people who struggle with accomplishing their goals. It walks them through each step of creating a S.M.A.R.T goal and allows them to track their progress along the way. 
 
 ## Installation
 
