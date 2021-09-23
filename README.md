@@ -1,6 +1,6 @@
 # Achieve
 
-![Alt text](public/images/Screen Shot 2021-09-23 at 1.00.25 PM.png?raw=true "Title")
+<img src="public/images/Screen Shot 2021-09-23 at 1.00.25 PM.png">
 
 This application was built for people who struggle with accomplishing their goals. It walks them through each step of creating a S.M.A.R.T goal and allows them to track their progress along the way. 
 
