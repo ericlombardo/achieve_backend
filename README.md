@@ -1,6 +1,6 @@
 # Achieve
 
-<img src="public/images/Screen Shot 2021-09-23 at 1.00.25 PM.png">
+<img src="public/images/homePage.png">
 
 This application was built for people who struggle with accomplishing their goals. It walks them through each step of creating a S.M.A.R.T goal and allows them to track their progress along the way. 
 
@@ -29,6 +29,20 @@ To view the site, both the backend and frontend will need set up
 
 ## Build Status
 While the application is functional for personal use, it is still in the development phase. I would like to add a feature that allows multiple users to log in securely and track their goals. Other features would include reminders of goal deadlines and the ability to give encouragment as they achieve each of their milestones.
+
+
+## Usage
+HomeScreen
+Once you start the application you are taken to a home screen where you are welcomed with a quote and promted to start tracking your goals.
+
+Goals
+You are then taken to the goals page where you can see each goal with it's designated milestones. Each goal displays how many days are left before you are to complete the goal and they are sorted to show you the goals you want to complete soonest.
+
+New Goal sCreen start and stop
+If you click the New Goal tab in the navbar you are prompted to select if you would like to start or quit something
+
+New goal form
+Once you select your choice, you are then taken to the proper form. You can fill out the form and submit it to start tracking your goal. You are then taken back to the main goals page where you will see your new goal being tracked.
 
 ## Contributing
 
