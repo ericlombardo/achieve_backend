@@ -32,17 +32,17 @@ While the application is functional for personal use, it is still in the develop
 
 
 ## Usage
-<img src="public/images/homePage2.png">
 Once you start the application you are taken to a home screen where you are welcomed with a quote and promted to start tracking your goals.
+<img src="public/images/homePage2.png">
 
-<img src="public/images/goals.png">
 You are then taken to the goals page where you can see each goal with it's designated milestones. Each goal displays how many days are left before you are to complete the goal and they are sorted to show you the goals you want to complete soonest.
+<img src="public/images/goals.png">
 
-<img src="public/images/newGoalStartOrStop.png">
 If you click the New Goal tab in the navbar you are prompted to select if you would like to start or quit something
+<img src="public/images/newGoalStartOrStop.png">
 
-<img src="public/images/newGoal.png">
 Once you select your choice, you are then taken to the proper form. You can fill out the form and submit it to start tracking your goal. You are then taken back to the main goals page where you will see your new goal being tracked.
+<img src="public/images/newGoal.png">
 
 ## Contributing
 
